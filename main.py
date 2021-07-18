@@ -1,12 +1,12 @@
 from tkinter import *
-import hgh
+import reset_board
 
 root = Tk()
 root.title('Ня!')
 root.geometry("300x250")
 
 def click_button():
-   hgh.start()
+   reset_board.start()
 
 btn = Button(text="Запустить сброс доски",
              background="#555",

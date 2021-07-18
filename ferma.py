@@ -4,6 +4,11 @@ import pyautogui
 import time
 import tyk
 
+#
+# akk = ('BlueCoffee', 'obgect002', 'obgect003', 'obgect004', 'obgect005', 'obgect006', 'obgect007'
+#        , 'obgect008', 'obgect009', 'obgect010', 'obgect011', 'obgect012', 'obgect013', 'obgect014'
+#        , 'obgect001', 'obgect001', 'obgect001', 'obgect001', 'obgect001', 'obgect001')
+
 x, y = pyautogui.size()  # получение координат монитора
 tyk.click_class.start()
 time.sleep(3)
