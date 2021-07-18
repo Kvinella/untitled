@@ -1,25 +1,86 @@
 import threading
+import time
+
+import functions
 from AutoHotPy import AutoHotPy
 from InterceptionWrapper import *
 
+
 class ClickClass:
 
+    started: bool = False
+
+    auto: AutoHotPy
+
+    SYMBOLS_KEYS: dict
+
     def __init__(self):
+
         # create AutoHotPy instance and set stop event handler
         self.auto = AutoHotPy()
-        self.auto.registerExit(self.auto.ESC, self.auto.stop())
+        self.auto.registerExit(self.auto.NUMLOCK, self.stop)
 
         # init threads
         self.auto_py_thread = threading.Thread(target=self.start_auto_py, args=())
 
+        self.SYMBOLS_KEYS = {
+            ' ': self.auto.SPACE,
+            'ENTER': self.auto.ENTER,
+            'TAB': self.auto.TAB,
+            'CTRL': self.auto.LEFT_CTRL,
+            'ESC': self.auto.ESC,
+            'COMMA': self.auto.COMMA,
+            'A': self.auto.A,
+            'B': self.auto.B,
+            'C': self.auto.C,
+            'D': self.auto.D,
+            'E': self.auto.E,
+            'F': self.auto.F,
+            'G': self.auto.G,
+            'H': self.auto.H,
+            'I': self.auto.I,
+            'J': self.auto.J,
+            'K': self.auto.K,
+            'L': self.auto.L,
+            'M': self.auto.M,
+            'N': self.auto.N,
+            'O': self.auto.O,
+            'P': self.auto.P,
+            'Q': self.auto.Q,
+            'R': self.auto.R,
+            'S': self.auto.S,
+            'T': self.auto.T,
+            'U': self.auto.U,
+            'V': self.auto.V,
+            'W': self.auto.W,
+            'X': self.auto.X,
+            'Y': self.auto.Y,
+            'Z': self.auto.Z,
+            '0': self.auto.N0,
+            '1': self.auto.N1,
+            '2': self.auto.N2,
+            '3': self.auto.N3,
+            '4': self.auto.N4,
+            '5': self.auto.N5,
+            '6': self.auto.N6,
+            '7': self.auto.N7,
+            '8': self.auto.N8,
+            '9': self.auto.N9,
+            'DOWN_ARROW': self.auto.DOWN_ARROW
+        }
+
     def start(self):
-        # start threads
-        self.auto_py_thread.start()
+        if not self.started:
+            self.auto_py_thread.start()
+            self.started = True
 
     def start_auto_py(self):
         self.auto.start()
 
-    def recorded_macro(self):
+    def stop(self, *args):
+        self.auto.stop()
+
+    def click_lkm(self):
         stroke = InterceptionMouseStroke()
         stroke.state = InterceptionMouseState.INTERCEPTION_MOUSE_LEFT_BUTTON_DOWN
         self.auto.sendToDefaultMouse(stroke)
@@ -27,7 +88,7 @@ class ClickClass:
         stroke.state = InterceptionMouseState.INTERCEPTION_MOUSE_LEFT_BUTTON_UP
         self.auto.sendToDefaultMouse(stroke)
 
-    def recorded_macro1(self):
+    def click_pkm(self):
         stroke = InterceptionMouseStroke()
         stroke.state = InterceptionMouseState.INTERCEPTION_MOUSE_RIGHT_BUTTON_DOWN
         self.auto.sendToDefaultMouse(stroke)
@@ -35,160 +96,36 @@ class ClickClass:
         stroke.state = InterceptionMouseState.INTERCEPTION_MOUSE_RIGHT_BUTTON_UP
         self.auto.sendToDefaultMouse(stroke)
 
-
     def click(self):
-        self.recorded_macro()
+        self.click_lkm()
 
     def clickPKM(self):
-        self.recorded_macro1()
-
-    def moveTokDOSKE(self, pt, w, h):
-        self.auto.moveMouseToPosition(pt[0] + w -20, pt[1] + h + 23)
+        self.click_pkm()
 
     def moveToNZ(self, zx, zy):
         self.auto.moveMouseToPosition(zx, zy)
 
+    def moveRelative(self, dx, dy):
+        functions.send_relative_move(self.auto, 1, 1)
+        functions.send_relative_move(self.auto, -1, -1)
+        functions.send_relative_move(self.auto, dx, dy)
+
     def moveTo(self, pt, w, h):
-        self.auto.moveMouseToPosition(pt[0] + w -20, pt[1] + h - 20)
-    def moveTo20(self):
-        self.auto.moveMouseToPosition(40,50)
-    def moveTo550600(self):
-        self.auto.moveMouseToPosition(550,600)
-    def moveToD(self, pt, w, h):
-        self.auto.moveMouseToPosition(pt[0] + w, pt[1] + h)
+        self.auto.moveMouseToPosition(pt[0] + w - 20, pt[1] + h - 20)
 
-    def moveToR(self, w, h):
-        self.auto.moveMouseToPosition(w, h)
+    def upKey(self, key: str):
+        self.SYMBOLS_KEYS.get(key).up()
 
-    def downSPASE(self):
-        self.auto.SPACE.down()
-    def upSPASE(self):
-        self.auto.SPACE.up()
+    def downKey(self, key: str):
+        self.SYMBOLS_KEYS.get(key).down()
 
-    def pressSPASE(self):
-        self.auto.SPACE.press()
-    def pressEnter(self):
-        self.auto.ENTER.press()
-    def pressTAB(self):
-        self.auto.TAB.press()
-    def pressCTRL(self):
-        self.auto.LEFT_CTRL.press()
-    def pressESC(self):
-        self.auto.ESC.press()
-
-
-    def clickArrow(self):
-        self.auto.DOWN_ARROW.press()
-
-
-
-    def pressB(self):
-        self.auto.B.press()
-    def clickL(self):
-        self.auto.L.press()
-    def clickM(self):
-        self.auto.M.press()
-
-
-    def pressW(self):
-        self.auto.W.press()
-    def pressA(self):
-        self.auto.A.press()
-    def pressS(self):
-        self.auto.S.press()
-    def pressD(self):
-        self.auto.D.press()
-
-    def press1(self):
-        self.auto.N1.press()
-    def press2(self):
-        self.auto.N2.press()
-    def press3(self):
-        self.auto.N3.press()
-    def press4(self):
-        self.auto.N4.press()
-    def press5(self):
-        self.auto.N5.press()
-    def press6(self):
-        self.auto.N6.press()
-
-    def COMMA(self):
-        self.auto.COMMA.press()
-
-    def downCOMMA(self):
-        self.auto.COMMA.down()
-
-    def upCOMMA(self):
-        self.auto.COMMA.up()
-
-    def pressM(self):
-        self.auto.M.press()
-    def pressO(self):
-        self.auto.O.press()
-
-    def downCTRL(self):
-        self.auto.LEFT_CTRL.down()
-
-    def pressP(self):
-        self.auto.P.press()
-
-    def pressU(self):
-        self.auto.U.press()
-
-
-
-
-    def pressE(self):
-        self.auto.E.press()
-    def pressR(self):
-        self.auto.R.press()
-    def pressT(self):
-        self.auto.T.press()
-    def pressF(self):
-        self.auto.F.press()
-    def pressC(self):
-        self.auto.C.press()
-    def pressV(self):
-        self.auto.V.press()
-    def pressG(self):
-        self.auto.G.press()
-
-    def pressQ(self):
-        self.auto.Q.press()
-
-
-
-    def upE(self):
-        self.auto.E.up()
-
-    def downE(self):
-        self.auto.E.down()
-
-
-    def upW(self):
-        self.auto.W.up()
-    def downW(self):
-        self.auto.W.down()
-    def upA(self):
-        self.auto.A.up()
-    def downA(self):
-        self.auto.A.down()
-    def upD(self):
-        self.auto.D.up()
-    def downD(self):
-        self.auto.D.down()
-    def upS(self):
-        self.auto.S.up()
-    def downS(self):
-        self.auto.S.down()
-    def downSHIST(self):
-        self.auto.LEFT_SHIFT.down()
-    def upSHIST(self):
-        self.auto.LEFT_SHIFT.up()
-
-    def pressSHIST(self):
-        self.auto.LEFT_SHIFT.press()
-
+    def pressKey(self, key: str, pause: float = 0):
+        if pause == 0:
+            self.SYMBOLS_KEYS.get(key).press()
+        else:
+            self.SYMBOLS_KEYS.get(key).down()
+            time.sleep(pause)
+            self.SYMBOLS_KEYS.get(key).up()
 
 
 click_class = ClickClass()

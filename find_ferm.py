@@ -23,7 +23,7 @@ while o <= n:
     r = None # ищем лог
     while r is None:
         print('ог')
-        play = cv2.imread("data/ferma/log.jpg", 0)
+        play = cv2.imread("img/ferma/log.jpg", 0)
         w, h = play.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -42,18 +42,18 @@ while o <= n:
 
     pyautogui.typewrite(akk[o])
     time.sleep(0.1)
-    tyk.click_class.pressEnter()
+    tyk.click_class.pressKey('ENTER')
     time.sleep(0.1)
-    tyk.click_class.pressEnter()
+    tyk.click_class.pressKey('ENTER')
     time.sleep(0.1)
     pyautogui.typewrite('n1n2n3')
     time.sleep(0.5)
-    tyk.click_class.pressEnter()
+    tyk.click_class.pressKey('ENTER')
 
     r = None # ищем ок
     while r is None:
         print('ищем ок')
-        play = cv2.imread("data/ferma/log2.jpg", 0)
+        play = cv2.imread("img/ferma/log2.jpg", 0)
         w, h = play.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -67,13 +67,13 @@ while o <= n:
                 flag = True
         if flag:
             r = True
-            tyk.click_class.pressEnter()
+            tyk.click_class.pressKey('ENTER')
 
 
 
     r = None #ищем еграть
     while r is None:
-        play = cv2.imread("data/ferma/egrat.jpg", 0)
+        play = cv2.imread("img/ferma/egrat.jpg", 0)
         w, h = play.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -95,7 +95,7 @@ while o <= n:
     while o1 <= n1:
         r = None  # ищем полосу
         while r is None:
-            play = cv2.imread("data/ferma/polosa.jpg", 0)
+            play = cv2.imread("img/ferma/polosa.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -119,12 +119,12 @@ while o <= n:
         g = 0 # тыкаем на клавишу вниз
         while g < o1:
             time.sleep(0.3)
-            tyk.click_class.clickArrow()
+            tyk.click_class.pressKey('DOWN_ARROW')
             g = g + 1
 
         r = None  # тык на играть
         while r is None:
-            play = cv2.imread("data/ferma/play.jpg", 0)
+            play = cv2.imread("img/ferma/play.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -145,7 +145,7 @@ while o <= n:
 
         r = None  # ждем и тыкаем на ок, ищем куда загрузились в колдкрок или нг
         while r is None:
-            play = cv2.imread("data/ferma/ok.jpg", 0)
+            play = cv2.imread("img/ferma/ok.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -158,7 +158,7 @@ while o <= n:
                 if pt is not None:
                     flag = True #определяет куда загрузились
                     if flag == True:
-                        play = cv2.imread("data/ferma/g/ch1k.jpg", 0)
+                        play = cv2.imread("img/ferma/g/ch1k.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -174,7 +174,7 @@ while o <= n:
                         if flag:
                             r = True
 
-                        play = cv2.imread("data/ferma/g/ch2k.jpg", 0)
+                        play = cv2.imread("img/ferma/g/ch2k.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -190,7 +190,7 @@ while o <= n:
                         if flag:
                             r = True
 
-                        play = cv2.imread("data/ferma/g/ch7n.jpg", 0)
+                        play = cv2.imread("img/ferma/g/ch7n.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -206,7 +206,7 @@ while o <= n:
                         if flag:
                             r = True
 
-                        play = cv2.imread("data/ferma/g/ch3n.jpg", 0)
+                        play = cv2.imread("img/ferma/g/ch3n.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -223,7 +223,7 @@ while o <= n:
                             r = True
 
 
-                        play = cv2.imread("data/ferma/ok.jpg", 0)
+                        play = cv2.imread("img/ferma/ok.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -249,7 +249,7 @@ while o <= n:
         r = None  # ждем и тыкаем на закрыть
         while r is None:
             print('ищу закрыть')
-            play = cv2.imread("data/ferma/close.jpg", 0)
+            play = cv2.imread("img/ferma/close.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -262,9 +262,9 @@ while o <= n:
                 if pt is not None:
                     flag = True
                     if flag == True:
-                        tyk.click_class.pressESC()
+                        tyk.click_class.pressKey('ESC')
                         time.sleep(0.3)
-                        play = cv2.imread("data/ferma/close.jpg", 0)
+                        play = cv2.imread("img/ferma/close.jpg", 0)
                         w, h = play.shape[::-1]
                         image = pyautogui.screenshot(region=(0, 0, x, y))
                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -277,18 +277,18 @@ while o <= n:
                             if pt is not None:
                                 flag = True
                         if flag:
-                            tyk.click_class.pressESC()
+                            tyk.click_class.pressKey('ESC')
 
             if flag:
                 r = True
 
         #сюда добить галку и переключение
         if kolgrok == True:
-            tyk.click_class.pressO()
+            tyk.click_class.press('0')
 
             r = None  # ищем пати
             while r is None:
-                play = cv2.imread("data/ferma/g/tp.jpg", 0)
+                play = cv2.imread("img/ferma/g/tp.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -311,7 +311,7 @@ while o <= n:
 
             r = None  # ищем вступить
             while r is None:
-                play = cv2.imread("data/ferma/g/vst.jpg", 0)
+                play = cv2.imread("img/ferma/g/vst.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -333,7 +333,7 @@ while o <= n:
 
             r = None  # ищем выйти
             while r is None:
-                play = cv2.imread("data/ferma/g/poka.jpg", 0)
+                play = cv2.imread("img/ferma/g/poka.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -355,10 +355,10 @@ while o <= n:
 
         if ng == True:
 
-            tyk.click_class.pressP()
+            tyk.click_class.press('P')
             r = None  # чек на крылья
             while r is None:
-                play = cv2.imread("data/ferma/g/kost.jpg", 0)
+                play = cv2.imread("img/ferma/g/kost.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -375,7 +375,7 @@ while o <= n:
                             tyk.click_class.click()
                             time.sleep(0.1)
 
-                            play = cv2.imread("data/ferma/g/krl.jpg", 0)
+                            play = cv2.imread("img/ferma/g/krl.jpg", 0)
                             w, h = play.shape[::-1]
                             image = pyautogui.screenshot(region=(0, 0, x, y))
                             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -393,16 +393,16 @@ while o <= n:
                                         time.sleep(0.1)
 
                 r = True
-                tyk.click_class.pressESC()
+                tyk.click_class.pressKey('ESC')
 
             ged = None
             iren = None
             k = True  # чек на квест
             if k == True:
-                tyk.click_class.pressU()
+                tyk.click_class.press('U')
                 time.sleep(0.1)
                 # переключаем на доступные задания
-                play = cv2.imread("data/ferma/g/do.jpg", 0)
+                play = cv2.imread("img/ferma/g/do.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -420,7 +420,7 @@ while o <= n:
                             time.sleep(0.1)
 
                 # открывае нг
-                play = cv2.imread("data/ferma/g/ferma.jpg", 0)
+                play = cv2.imread("img/ferma/g/ferma.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -439,7 +439,7 @@ while o <= n:
                             tyk.click_class.click()
                             time.sleep(0.1)
 
-                play = cv2.imread("data/ferma/g/kv.jpg", 0)
+                play = cv2.imread("img/ferma/g/kv.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -457,7 +457,7 @@ while o <= n:
                             time.sleep(0.1)
                             iren = True
 
-                play = cv2.imread("data/ferma/g/kdedy.jpg", 0)
+                play = cv2.imread("img/ferma/g/kdedy.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -474,11 +474,11 @@ while o <= n:
 
                 print(iren, ged)
 
-            tyk.click_class.pressESC()
+            tyk.click_class.pressKey('ESC')
             time.sleep(0.3)
             ded = False  # чеwaк на то где стоим
             if ded == False:
-                play = cv2.imread("data/ferma/g/dedysh.jpg", 0)
+                play = cv2.imread("img/ferma/g/dedysh.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -499,11 +499,11 @@ while o <= n:
 
             # бег до ирен если квест у нее не взят
             if iren == True:
-                tyk.click_class.pressM()
+                tyk.click_class.press('M')
 
                 r = None  # ищем стрелку
                 while r is None:
-                    play = cv2.imread("data/ferma/g/vniz.jpg", 0)
+                    play = cv2.imread("img/ferma/g/vniz.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -525,7 +525,7 @@ while o <= n:
 
                 r = None  # ищем портал
                 while r is None:
-                    play = cv2.imread("data/ferma/g/gate.jpg", 0)
+                    play = cv2.imread("img/ferma/g/gate.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -547,7 +547,7 @@ while o <= n:
 
                 r = None  # ищем сер
                 while r is None:
-                    play = cv2.imread("data/ferma/g/ser.jpg", 0)
+                    play = cv2.imread("img/ferma/g/ser.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -564,25 +564,22 @@ while o <= n:
                         r = True
 
                 time.sleep(0.5)
-                tyk.click_class.downCOMMA()
-                time.sleep(0.3)
-
-                tyk.click_class.upCOMMA()
+                tyk.click_class.pressKey('COMMA', 0.3)
 
                 time.sleep(0.5)
 
-                tyk.click_class.downA()
+                tyk.click_class.downKey('A')
                 time.sleep(0.1)
-                tyk.click_class.upA()
+                tyk.click_class.upKey('A')
 
                 time.sleep(0.2)
 
                 r = None  # ищем ирен
                 while r is None:
                     print('ищу')
-                    tyk.click_class.downW()
+                    tyk.click_class.downKey('W')
 
-                    play = cv2.imread("data/ferma/g/Q.jpg", 0)
+                    play = cv2.imread("img/ferma/g/Q.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -596,14 +593,14 @@ while o <= n:
                             flag = True
 
                     if flag:
-                        tyk.click_class.upW()
+                        tyk.click_class.upKey('W')
                         time.sleep(0.2)
-                        tyk.click_class.pressQ()
+                        tyk.click_class.press('Q')
                         r = True
 
                 r = None  # ищем квест
                 while r is None:
-                    play = cv2.imread("data/ferma/g/pog.jpg", 0)
+                    play = cv2.imread("img/ferma/g/pog.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -625,7 +622,7 @@ while o <= n:
 
                 r = None  # моя чудесная ферма
                 while r is None:
-                    play = cv2.imread("data/ferma/g/moz.jpg", 0)
+                    play = cv2.imread("img/ferma/g/moz.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -649,7 +646,7 @@ while o <= n:
                 while r is None:
                     tyk.click_class.click()
                     time.sleep(0.2)
-                    play = cv2.imread("data/ferma/g/oks.jpg", 0)
+                    play = cv2.imread("img/ferma/g/oks.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -673,11 +670,11 @@ while o <= n:
                 zy, zx = pyautogui.position()
 
                 time.sleep(0.2)
-                tyk.click_class.pressM()
+                tyk.click_class.press('M')
 
                 r = None  # ищем стрелку
                 while r is None:
-                    play = cv2.imread("data/ferma/g/vniz.jpg", 0)
+                    play = cv2.imread("img/ferma/g/vniz.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -699,7 +696,7 @@ while o <= n:
 
                 r = None  # ищем портал
                 while r is None:
-                    play = cv2.imread("data/ferma/g/gate2.jpg", 0)
+                    play = cv2.imread("img/ferma/g/gate2.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -721,7 +718,7 @@ while o <= n:
 
                 r = None  # ищем сер
                 while r is None:
-                    play = cv2.imread("data/ferma/g/ser.jpg", 0)
+                    play = cv2.imread("img/ferma/g/ser.jpg", 0)
                     w, h = play.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -737,13 +734,13 @@ while o <= n:
                     if flag:
                         r = True
 
-                tyk.click_class.pressCTRL()
+                tyk.click_class.pressKey('CTRL')
 
                 time.sleep(0.2)
                 tyk.click_class.moveToNZ(zy, zx)
                 time.sleep(0.2)
 
-                tyk.click_class.pressCTRL()
+                tyk.click_class.pressKey('CTRL')
 
                 l = 0
                 p = 1
@@ -755,21 +752,21 @@ while o <= n:
 
                 time.sleep(0.2)
 
-                tyk.click_class.downA()
+                tyk.click_class.downKey('A')
                 time.sleep(3.7)
-                tyk.click_class.upA()
+                tyk.click_class.upKey('A')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(5.6)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
-                tyk.click_class.downA()
+                tyk.click_class.downKey('A')
                 time.sleep(1.6)
-                tyk.click_class.upA()
+                tyk.click_class.upKey('A')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(5.5)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
                 l = 0
                 p = 1
@@ -779,25 +776,25 @@ while o <= n:
                     time.sleep(0.1)
                     l = l + 1
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(7.4)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
             if ded == True:
-                tyk.click_class.downA()
+                tyk.click_class.downKey('A')
                 time.sleep(0.3)
-                tyk.click_class.upA()
+                tyk.click_class.upKey('A')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(0.2)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
             time.sleep(0.2)
-            tyk.click_class.pressQ()
+            tyk.click_class.pressKey('Q')
 
             r = None  # чек на квест и взятие если его нет
             while r is None:
-                play = cv2.imread("data/ferma/g/zad.jpg", 0)
+                play = cv2.imread("img/ferma/g/zad.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -817,7 +814,7 @@ while o <= n:
 
                             time.sleep(0.2)
                             print('ищу чудо')
-                            play = cv2.imread("data/ferma/g/zudo.jpg", 0)
+                            play = cv2.imread("img/ferma/g/zudo.jpg", 0)
                             w, h = play.shape[::-1]
                             image = pyautogui.screenshot(region=(0, 0, x, y))
                             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -842,7 +839,7 @@ while o <= n:
                                         tyk.click_class.click()
                                         time.sleep(0.1)
 
-                                        play = cv2.imread("data/ferma/g/zad.jpg", 0)
+                                        play = cv2.imread("img/ferma/g/zad.jpg", 0)
                                         w, h = play.shape[::-1]
                                         image = pyautogui.screenshot(region=(0, 0, x, y))
                                         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -859,7 +856,7 @@ while o <= n:
                                                     time.sleep(0.1)
                                                     tyk.click_class.click()
 
-                                                    play = cv2.imread("data/ferma/g/zem.jpg", 0)
+                                                    play = cv2.imread("img/ferma/g/zem.jpg", 0)
                                                     w, h = play.shape[::-1]
                                                     image = pyautogui.screenshot(region=(0, 0, x, y))
                                                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -900,11 +897,11 @@ while o <= n:
                                                                 time.sleep(0.1)
                                                                 tyk.click_class.click()
                                                                 time.sleep(0.1)
-                                                                tyk.click_class.pressQ()
+                                                                tyk.click_class.pressKey('Q')
 
 
                                                             else:
-                                                                play = cv2.imread("data/ferma/g/nazad.jpg", 0)
+                                                                play = cv2.imread("img/ferma/g/nazad.jpg", 0)
                                                                 w, h = play.shape[::-1]
                                                                 image = pyautogui.screenshot(region=(0, 0, x, y))
                                                                 img_rgb = cv2.cvtColor(np.array(image),
@@ -923,7 +920,7 @@ while o <= n:
                                                                             time.sleep(0.1)
                                                                             tyk.click_class.click()
 
-                            play = cv2.imread("data/ferma/g/zem.jpg", 0)
+                            play = cv2.imread("img/ferma/g/zem.jpg", 0)
                             w, h = play.shape[::-1]
                             image = pyautogui.screenshot(region=(0, 0, x, y))
                             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -962,13 +959,13 @@ while o <= n:
                                 time.sleep(0.1)
                                 tyk.click_class.click()
                                 time.sleep(0.1)
-                                tyk.click_class.pressQ()
+                                tyk.click_class.pressKey('Q')
 
 
                             else:
                                 time.sleep(0.5)
                                 print('ищу')
-                                play = cv2.imread("data/ferma/g/nazad.jpg", 0)
+                                play = cv2.imread("img/ferma/g/nazad.jpg", 0)
                                 w, h = play.shape[::-1]
                                 image = pyautogui.screenshot(region=(0, 0, x, y))
                                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -990,7 +987,7 @@ while o <= n:
 
             r = None  # тык магазин
             while r is None:
-                play = cv2.imread("data/ferma/g/mag.jpg", 0)
+                play = cv2.imread("img/ferma/g/mag.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1011,7 +1008,7 @@ while o <= n:
 
             r = None  # тык инструменты
             while r is None:
-                play = cv2.imread("data/ferma/g/instr.jpg", 0)
+                play = cv2.imread("img/ferma/g/instr.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1032,7 +1029,7 @@ while o <= n:
 
             r = None  # купить лейку
             while r is None:
-                play = cv2.imread("data/ferma/g/leiki.jpg", 0)
+                play = cv2.imread("img/ferma/g/leiki.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1053,7 +1050,7 @@ while o <= n:
 
             r = None  # согласится
             while r is None:
-                play = cv2.imread("data/ferma/g/otmena.jpg", 0)
+                play = cv2.imread("img/ferma/g/otmena.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1073,7 +1070,7 @@ while o <= n:
 
             r = None  # тык на магазин семян
             while r is None:
-                play = cv2.imread("data/ferma/g/semena.jpg", 0)
+                play = cv2.imread("img/ferma/g/semena.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1094,7 +1091,7 @@ while o <= n:
 
             r = None  # купить яблоки
             while r is None:
-                play = cv2.imread("data/ferma/g/aple.jpg", 0)
+                play = cv2.imread("img/ferma/g/aple.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1115,7 +1112,7 @@ while o <= n:
 
             r = None  # согласится
             while r is None:
-                play = cv2.imread("data/ferma/g/otmena.jpg", 0)
+                play = cv2.imread("img/ferma/g/otmena.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1134,15 +1131,15 @@ while o <= n:
                     r = True
 
             time.sleep(1)
-            tyk.click_class.pressESC()
+            tyk.click_class.pressKey('ESC')
 
-        tyk.click_class.downA()
+        tyk.click_class.downKey('A')
         time.sleep(3)
-        tyk.click_class.upA()
+        tyk.click_class.upKey('A')
 
         r = None  # ждем и тыкаем на 13 инст
         while r is None:
-            play = cv2.imread("data/ferma/instans.jpg", 0)
+            play = cv2.imread("img/ferma/instans.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1166,7 +1163,7 @@ while o <= n:
 
         r = None  # ждем открыть после бежим к грядке
         while r is None:
-            play = cv2.imread("data/ferma/otk.jpg", 0)
+            play = cv2.imread("img/ferma/otk.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1183,29 +1180,29 @@ while o <= n:
 
         zy, zx = pyautogui.position()
 
-        tyk.click_class.downD()
+        tyk.click_class.downKey('D')
         time.sleep(3.3)
-        tyk.click_class.upD()
+        tyk.click_class.upKey('D')
 
-        tyk.click_class.downA()
+        tyk.click_class.downKey('A')
         time.sleep(0.1)
-        tyk.click_class.upA()
+        tyk.click_class.upKey('A')
 
-        tyk.click_class.downW()
+        tyk.click_class.downKey('W')
         time.sleep(1.25)
-        tyk.click_class.upW()
+        tyk.click_class.upKey('W')
 
-        tyk.click_class.downD()
+        tyk.click_class.downKey('D')
         time.sleep(0.5)
-        tyk.click_class.upD()
+        tyk.click_class.upKey('D')
 
-        tyk.click_class.pressCTRL()
+        tyk.click_class.pressKey('CTRL')
 
         time.sleep(0.2)
         tyk.click_class.moveToNZ(zy, zx)
         time.sleep(0.2)
 
-        tyk.click_class.pressCTRL()
+        tyk.click_class.pressKey('CTRL')
 
         l = 0
         p = 4
@@ -1217,7 +1214,7 @@ while o <= n:
 
         time.sleep(0.2)
 
-        vn = cv2.imread("data/ferma/serp.jpg", 0)
+        vn = cv2.imread("img/ferma/serp.jpg", 0)
         w, h = vn.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1237,7 +1234,7 @@ while o <= n:
 
         r = None #поиск лопаты
         while r is None:
-            vn = cv2.imread("data/ferma/lp.jpg", 0)
+            vn = cv2.imread("img/ferma/lp.jpg", 0)
             w, h = vn.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1257,7 +1254,7 @@ while o <= n:
 
         r = None #поиск перчика
         while r is None:
-            vn = cv2.imread("data/ferma/perez.jpg", 0)
+            vn = cv2.imread("img/ferma/perez.jpg", 0)
             w, h = vn.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1280,7 +1277,7 @@ while o <= n:
 
         r = None #поиск посадить
         while r is None:
-            vn = cv2.imread("data/ferma/pos.jpg", 0)
+            vn = cv2.imread("img/ferma/pos.jpg", 0)
             w, h = vn.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1303,7 +1300,7 @@ while o <= n:
 
         r = None #поиск лейки
         while r is None:
-            vn = cv2.imread("data/ferma/leika.jpg", 0)
+            vn = cv2.imread("img/ferma/leika.jpg", 0)
             w, h = vn.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1327,12 +1324,12 @@ while o <= n:
 
         #сюда потом поставить код на сбор
         time.sleep(4)
-        tyk.click_class.pressESC()
+        tyk.click_class.pressKey('ESC')
 
 
         r = None  # тык на еск
         while r is None:
-            play = cv2.imread("data/ferma/ESC.jpg", 0)
+            play = cv2.imread("img/ferma/ESC.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1353,7 +1350,7 @@ while o <= n:
 
         r = None  # ожидаем вопрос
         while r is None:
-            play = cv2.imread("data/ferma/vopros.jpg", 0)
+            play = cv2.imread("img/ferma/vopros.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)

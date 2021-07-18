@@ -11,11 +11,11 @@ def start():
     p = 0
     g = 0
 
-    name = ("data/bu/name/name1.jpg", "data/bu/name/name2.jpg", "data/bu/name/name3.jpg", "data/bu/name/name4.jpg",
-            "data/bu/name/name5.jpg", "data/bu/name/name6.jpg", "data/bu/name/name7.jpg", "data/bu/name/name8.jpg",
-            "data/bu/name/name9.jpg", "data/bu/name/name10.jpg", "data/bu/name/name11.jpg", "data/bu/name/name12.jpg",
-            "data/bu/name/name13.jpg", "data/bu/name/name14.jpg", "data/bu/name/name15.jpg", "data/bu/name/name16.jpg",
-            "data/bu/name/name17.jpg", "data/bu/name/name18.jpg", "data/bu/name/name19.jpg", "data/bu/name/name20.jpg")
+    name = ("img/bu/name/name1.jpg", "img/bu/name/name2.jpg", "img/bu/name/name3.jpg", "img/bu/name/name4.jpg",
+            "img/bu/name/name5.jpg", "img/bu/name/name6.jpg", "img/bu/name/name7.jpg", "img/bu/name/name8.jpg",
+            "img/bu/name/name9.jpg", "img/bu/name/name10.jpg", "img/bu/name/name11.jpg", "img/bu/name/name12.jpg",
+            "img/bu/name/name13.jpg", "img/bu/name/name14.jpg", "img/bu/name/name15.jpg", "img/bu/name/name16.jpg",
+            "img/bu/name/name17.jpg", "img/bu/name/name18.jpg", "img/bu/name/name19.jpg", "img/bu/name/name20.jpg")
 
     x, y = pyautogui.size()
     tyk.click_class.start()
@@ -36,7 +36,7 @@ def start():
         if l:
             r = None
             while r is None:
-                play = cv2.imread("data/play.jpg", 0)
+                play = cv2.imread("img/play.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -53,7 +53,7 @@ def start():
 
             f = (o >= 6)
             if f:
-                vn = cv2.imread("data/vniz.jpg", 0)
+                vn = cv2.imread("img/vniz.jpg", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -91,7 +91,7 @@ def start():
 
             r = None
             while r is None:
-                vn = cv2.imread("data/ok.jpg", 0)
+                vn = cv2.imread("img/ok.jpg", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -112,7 +112,7 @@ def start():
 
             r = None
             while r is None:
-                vn = cv2.imread("data/close.jpg", 0)
+                vn = cv2.imread("img/close.jpg", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -134,7 +134,7 @@ def start():
                 time.sleep(1)
 
                 r = None
-                vn = cv2.imread("data/close.jpg", 0)
+                vn = cv2.imread("img/close.jpg", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -155,12 +155,12 @@ def start():
                     tyk.click_class.clickESC()
                     time.sleep(1)
 
-            tyk.click_class.clickL()
+            tyk.click_class.pressKey('L')
             time.sleep(1)
 
             r = None  # тык на квесты
             while r is None:
-                play = cv2.imread("data/doska.jpg", 0)
+                play = cv2.imread("img/doska.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -182,7 +182,7 @@ def start():
 
         r = None #kardi
         while r is None:
-            play = cv2.imread("data/logova/komar/kardi.jpg", 0)
+            play = cv2.imread("img/logova/komar/kardi.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -200,7 +200,7 @@ def start():
             r = True
         r = None #prof
         while r is None:
-            play = cv2.imread("data/logova/komar/prof.jpg", 0)
+            play = cv2.imread("img/logova/komar/prof.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -219,7 +219,7 @@ def start():
         
         r = None #feniks
         while r is None:
-            play = cv2.imread("data/logova/any/feniks.jpg", 0)
+            play = cv2.imread("img/logova/any/feniks.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -237,7 +237,7 @@ def start():
             r = True
         r = None #hran
         while r is None:
-            play = cv2.imread("data/logova/any/hran.jpg", 0)
+            play = cv2.imread("img/logova/any/hran.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -255,7 +255,7 @@ def start():
             r = True
         r = None #tymanka
         while r is None:
-            play = cv2.imread("data/logova/any/tymanka.jpg", 0)
+            play = cv2.imread("img/logova/any/tymanka.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -274,7 +274,7 @@ def start():
 
         r = None #chiron
         while r is None:
-            play = cv2.imread("data/logova/merka/chiron.jpg", 0)
+            play = cv2.imread("img/logova/merka/chiron.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -293,7 +293,7 @@ def start():
 
         r = None #manti
         while r is None:
-            play = cv2.imread("data/logova/yg/manti.jpg", 0)
+            play = cv2.imread("img/logova/yg/manti.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -311,7 +311,7 @@ def start():
             r = True
         r = None #mors
         while r is None:
-            play = cv2.imread("data/logova/yg/mors.jpg", 0)
+            play = cv2.imread("img/logova/yg/mors.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -330,7 +330,7 @@ def start():
 
         r = None #daidalos
         while r is None:
-            play = cv2.imread("data/logova/padames/daidalos.jpg", 0)
+            play = cv2.imread("img/logova/padames/daidalos.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -348,7 +348,7 @@ def start():
             r = True
         r = None #granom
         while r is None:
-            play = cv2.imread("data/logova/padames/granom.jpg", 0)
+            play = cv2.imread("img/logova/padames/granom.jpg", 0)
             w, h = play.shape[::-1]
             image = pyautogui.screenshot(region=(0, 0, x, y))
             img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -369,11 +369,11 @@ def start():
               'm', manti, 'm2', mors, 'd', daidalos, 'g', granom)
 
         if (feniks == True) or (hran == True) or (tymanka == True):
-            tyk.click_class.clickM()
+            tyk.click_class.pressKey('M')
             r = None   # ищем право нг
             while r is None:
                 time.sleep(0.5)
-                play = cv2.imread("data/logova/pravo.jpg", 0)
+                play = cv2.imread("img/logova/pravo.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -394,7 +394,7 @@ def start():
 
             r = None #ожидание телепорта
             while r is None:
-                vn = cv2.imread("data/b.png", 0)
+                vn = cv2.imread("img/b.png", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -411,13 +411,13 @@ def start():
                 if flag:
                     r = True
 
-            tyk.click_class.downW()
+            tyk.click_class.downKey('W')
             time.sleep(6)
-            tyk.click_class.upW()
+            tyk.click_class.upKey('W')
 
             r = None #выбираем ану арендель
             while r is None:
-                play = cv2.imread("data/logova/any/any.jpg", 0)
+                play = cv2.imread("img/logova/any/any.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -437,7 +437,7 @@ def start():
             tyk.click_class.click()
             r = None #тык на ОК
             while r is None:
-                play = cv2.imread("data/ok.jpg", 0)
+                play = cv2.imread("img/ok.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -460,7 +460,7 @@ def start():
             r = None #ожиданием загрузки ану
             while r is None:
                 print('ожиданием загрузки ану')
-                vn = cv2.imread("data/logova/any/meny.jpg", 0)
+                vn = cv2.imread("img/logova/any/meny.jpg", 0)
                 w, h = vn.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -480,49 +480,49 @@ def start():
             flag = True #подходим к порталу
             if flag == True:
                 time.sleep(0.3)
-                tyk.click_class.pressTAB()
+                tyk.click_class.pressKey('TAB')
                 time.sleep(0.3)
 
-                tyk.click_class.downW()
-                tyk.click_class.downA()
+                tyk.click_class.downKey('W')
+                tyk.click_class.downKey('A')
                 time.sleep(2)
-                tyk.click_class.upW()
-                tyk.click_class.upA()
+                tyk.click_class.upKey('W')
+                tyk.click_class.upKey('A')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(0.8)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
-                tyk.click_class.downW()
-                tyk.click_class.downA()
+                tyk.click_class.downKey('W')
+                tyk.click_class.downKey('A')
                 time.sleep(4.8)
-                tyk.click_class.upW()
-                tyk.click_class.upA()
+                tyk.click_class.upKey('W')
+                tyk.click_class.upKey('A')
 
-                tyk.click_class.downW()
-                tyk.click_class.downD()
+                tyk.click_class.downKey('W')
+                tyk.click_class.downKey('D')
                 time.sleep(0.6)
-                tyk.click_class.upW()
-                tyk.click_class.upD()
+                tyk.click_class.upKey('W')
+                tyk.click_class.upKey('D')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(0.4)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
-                tyk.click_class.downW()
-                tyk.click_class.downD()
+                tyk.click_class.downKey('W')
+                tyk.click_class.downKey('D')
                 time.sleep(1.2)
-                tyk.click_class.upW()
-                tyk.click_class.upD()
+                tyk.click_class.upKey('W')
+                tyk.click_class.upKey('D')
 
-                tyk.click_class.downW()
+                tyk.click_class.downKey('W')
                 time.sleep(1.2)
-                tyk.click_class.upW()
+                tyk.click_class.upKey('W')
 
             if feniks == True:
                 r = None  # ищем феникса
                 while r is None:
-                    vn = cv2.imread("data/logova/any/fenikslog.jpg", 0)
+                    vn = cv2.imread("img/logova/any/fenikslog.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -545,7 +545,7 @@ def start():
 
                 r = None  # тык на выбор
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vibor.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vibor.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -568,7 +568,7 @@ def start():
 
                 r = None  # тык вниз
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vniz.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vniz.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -606,7 +606,7 @@ def start():
 
                 r = None  # тык низкий
                 while r is None:
-                    vn = cv2.imread("data/logova/any/nizk.jpg", 0)
+                    vn = cv2.imread("img/logova/any/nizk.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -629,7 +629,7 @@ def start():
 
                 r = None  # тык войти
                 while r is None:
-                    vn = cv2.imread("data/logova/any/voiti.jpg", 0)
+                    vn = cv2.imread("img/logova/any/voiti.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -655,7 +655,7 @@ def start():
             if hran == True:
                 r = None  # ищем храна
                 while r is None:
-                    vn = cv2.imread("data/logova/any/hranlog.jpg", 0)
+                    vn = cv2.imread("img/logova/any/hranlog.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -678,7 +678,7 @@ def start():
 
                 r = None  # тык на выбор
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vibor.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vibor.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -700,7 +700,7 @@ def start():
                 tyk.click_class.click()
                 r = None  # тык вниз
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vniz.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vniz.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -738,7 +738,7 @@ def start():
 
                 r = None  # тык низкий
                 while r is None:
-                    vn = cv2.imread("data/logova/any/nizk.jpg", 0)
+                    vn = cv2.imread("img/logova/any/nizk.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -761,7 +761,7 @@ def start():
 
                 r = None  # тык войти
                 while r is None:
-                    vn = cv2.imread("data/logova/any/voiti.jpg", 0)
+                    vn = cv2.imread("img/logova/any/voiti.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -784,7 +784,7 @@ def start():
             if tymanka == True:
                 r = None
                 while r is None:
-                    vn = cv2.imread("data/logova/any/tymankalog.jpg", 0)
+                    vn = cv2.imread("img/logova/any/tymankalog.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -807,7 +807,7 @@ def start():
 
                 r = None  # тык на выбор
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vibor.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vibor.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -829,7 +829,7 @@ def start():
                 tyk.click_class.click()
                 r = None  # тык вниз
                 while r is None:
-                    vn = cv2.imread("data/logova/any/vniz.jpg", 0)
+                    vn = cv2.imread("img/logova/any/vniz.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -867,7 +867,7 @@ def start():
 
                 r = None  # тык низкий
                 while r is None:
-                    vn = cv2.imread("data/logova/any/nizk.jpg", 0)
+                    vn = cv2.imread("img/logova/any/nizk.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -890,7 +890,7 @@ def start():
 
                 r = None  # тык войти
                 while r is None:
-                    vn = cv2.imread("data/logova/any/voiti.jpg", 0)
+                    vn = cv2.imread("img/logova/any/voiti.jpg", 0)
                     w, h = vn.shape[::-1]
                     image = pyautogui.screenshot(region=(0, 0, x, y))
                     img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -911,10 +911,10 @@ def start():
                 tyk.click_class.click()
 
         if (kardi == True) or (prof == True):
-            tyk.click_class.clickM()
+            tyk.click_class.pressKey('M')
             r = None  # ищем низ нг
             while r is None:
-                play = cv2.imread("data/logova/niz.jpg", 0)
+                play = cv2.imread("img/logova/niz.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -933,13 +933,13 @@ def start():
             time.sleep(0.2)
             tyk.click_class.click()
 
-            tyk.click_class.downW()
+            tyk.click_class.downKey('W')
             time.sleep(10)
-            tyk.click_class.upW()
+            tyk.click_class.upKey('W')
 
             r = None
             while r is None:
-                play = cv2.imread("data/logova/komar/km.jpg", 0)
+                play = cv2.imread("img/logova/komar/km.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -959,7 +959,7 @@ def start():
             tyk.click_class.click()
             r = None
             while r is None:
-                play = cv2.imread("data/ok.jpg", 0)
+                play = cv2.imread("img/ok.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -979,10 +979,10 @@ def start():
             tyk.click_class.click()
 
         if (manti == True) or (mors == True):
-            tyk.click_class.clickM()
+            tyk.click_class.pressKey('M')
             r = None  # ищем низ нг
             while r is None:
-                play = cv2.imread("data/logova/niz.jpg", 0)
+                play = cv2.imread("img/logova/niz.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1001,13 +1001,13 @@ def start():
             time.sleep(0.2)
             tyk.click_class.click()
 
-            tyk.click_class.downW()
+            tyk.click_class.downKey('W')
             time.sleep(10)
-            tyk.click_class.upW()
+            tyk.click_class.upKey('W')
 
             r = None
             while r is None:
-                play = cv2.imread("data/logova/yg/yp.jpg", 0)
+                play = cv2.imread("img/logova/yg/yp.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1027,7 +1027,7 @@ def start():
             tyk.click_class.click()
             r = None
             while r is None:
-                play = cv2.imread("data/ok.jpg", 0)
+                play = cv2.imread("img/ok.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1047,10 +1047,10 @@ def start():
             tyk.click_class.click()
 
         if (daidalos == True) or (granom == True):
-            tyk.click_class.clickM()
+            tyk.click_class.pressKey('M')
             r = None  # ищем низ нг
             while r is None:
-                play = cv2.imread("data/logova/levo.jpg", 0)
+                play = cv2.imread("img/logova/levo.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1069,13 +1069,13 @@ def start():
             time.sleep(0.2)
             tyk.click_class.click()
 
-            tyk.click_class.downW()
+            tyk.click_class.downKey('W')
             time.sleep(10)
-            tyk.click_class.upW()
+            tyk.click_class.upKey('W')
 
             r = None
             while r is None:
-                play = cv2.imread("data/logova/padames/pd.jpg", 0)
+                play = cv2.imread("img/logova/padames/pd.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1095,7 +1095,7 @@ def start():
             tyk.click_class.click()
             r = None
             while r is None:
-                play = cv2.imread("data/ok.jpg", 0)
+                play = cv2.imread("img/ok.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1115,10 +1115,10 @@ def start():
             tyk.click_class.click()
 
         if (chiron == True):
-            tyk.click_class.clickM()
+            tyk.click_class.pressKey('M')
             r = None  # ищем низ нг
             while r is None:
-                play = cv2.imread("data/logova/levo.jpg", 0)
+                play = cv2.imread("img/logova/levo.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1137,13 +1137,13 @@ def start():
             time.sleep(0.2)
             tyk.click_class.click()
 
-            tyk.click_class.downW()
+            tyk.click_class.downKey('W')
             time.sleep(10)
-            tyk.click_class.upW()
+            tyk.click_class.upKey('W')
 
             r = None
             while r is None:
-                play = cv2.imread("data/logova/padames/pd.jpg", 0)
+                play = cv2.imread("img/logova/padames/pd.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -1163,7 +1163,7 @@ def start():
             tyk.click_class.click()
             r = None
             while r is None:
-                play = cv2.imread("data/ok.jpg", 0)
+                play = cv2.imread("img/ok.jpg", 0)
                 w, h = play.shape[::-1]
                 image = pyautogui.screenshot(region=(0, 0, x, y))
                 img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)

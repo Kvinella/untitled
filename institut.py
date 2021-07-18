@@ -6,9 +6,9 @@ import time
 from AutoHotPy import AutoHotPy
 from InterceptionWrapper import *
 q = 1
-lb=("data/institut/lb/1.ipg","data/institut/lb/2.ipg","data/institut/lb/3.ipg","data/institut/lb/4.ipg","data/institut/lb/5.ipg",
-    "data/institut/lb/6.ipg","data/institut/lb/7.ipg","data/institut/lb/8.ipg","data/institut/lb/9.ipg","data/institut/lb/10.ipg",
-    "data/institut/lb/11.ipg")
+lb=("img/institut/lb/1.ipg","img/institut/lb/2.ipg","img/institut/lb/3.ipg","img/institut/lb/4.ipg","img/institut/lb/5.ipg",
+    "img/institut/lb/6.ipg","img/institut/lb/7.ipg","img/institut/lb/8.ipg","img/institut/lb/9.ipg","img/institut/lb/10.ipg",
+    "img/institut/lb/11.ipg")
 
 
 class ClickClass:
@@ -120,7 +120,7 @@ while o:
     r = None
     while r is None:
         print('ожидаем квартал')
-        ins = cv2.imread("data/institut/zk.jpg", 0)
+        ins = cv2.imread("img/institut/zk.jpg", 0)
         w, h = ins.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -135,15 +135,15 @@ while o:
         if flag:
             r = True
 
-    click_class.downS()  # бежим назад
+    click_class.downKey('S')  # бежим назад
     time.sleep(2.25)
-    click_class.upS()
+    click_class.upKey('S')
     time.sleep(0.3)
 
     r = None
     while r is None:
         print('ожидаем к1')
-        ins = cv2.imread("data/institut/one1.jpg", 0)
+        ins = cv2.imread("img/institut/one1.jpg", 0)
         w, h = ins.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -167,43 +167,43 @@ while o:
         click_class.pressC() #баф
         time.sleep(1)
 
-        click_class.downD()  # бежим вправо
+        click_class.downKey('D')  # бежим вправо
         time.sleep(0.3)
-        click_class.upD()
+        click_class.upKey('D')
         time.sleep(0.3)
 
-        click_class.downW()
-        click_class.downSHIST() #добегаем до стены
+        click_class.downKey('W')
+        click_class.downKey('SHIFT') #добегаем до стены
         time.sleep(2.8)
-        click_class.upW()
-        click_class.upSHIST()
+        click_class.upKey('W')
+        click_class.upKey('SHIFT')
         time.sleep(0.5)
 
-        click_class.downA() #бежим вправо
+        click_class.downKey('A') #бежим вправо
         time.sleep(2.8)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(0.3)
 
-        click_class.downW() #добегаем до павуков
-        click_class.downSHIST()
+        click_class.downKey('W') #добегаем до павуков
+        click_class.downKey('SHIFT')
         time.sleep(2)
-        click_class.upW()
-        click_class.upSHIST()
+        click_class.upKey('W')
+        click_class.upKey('SHIFT')
         time.sleep(0.3)
 
-        click_class.pressR() #убиваем павуков
+        click_class.pressKey('R') #убиваем павуков
         time.sleep(0.5)
 
-        click_class.downW()
-        click_class.downSHIST() #добегаем до стены
+        click_class.downKey('W')
+        click_class.downKey('SHIFT') #добегаем до стены
         time.sleep(3.1)
-        click_class.upW()
-        click_class.upSHIST()
+        click_class.upKey('W')
+        click_class.upKey('SHIFT')
         time.sleep(0.5)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(5.1)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(0.3)
 
         click_class.press5() #рушим павутину
@@ -211,23 +211,23 @@ while o:
         click_class.click()
         time.sleep(0.3)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(2)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(3)
 
-        click_class.pressR() #убиваем павуков
+        click_class.pressKey('R') #убиваем павуков
         time.sleep(0.5)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(4)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(0.3)
 
     r = None
     while r is None:
         print('ожидаем к2')
-        ins = cv2.imread("data/institut/one2.jpg", 0)
+        ins = cv2.imread("img/institut/one2.jpg", 0)
         w, h = ins.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -248,78 +248,78 @@ while o:
     if one:
         time.sleep(1)
 
-        click_class.downW()
-        click_class.downSHIST() #добегаем до стены
+        click_class.downKey('W')
+        click_class.downKey('SHIFT') #добегаем до стены
         time.sleep(3.6)
-        click_class.upW()
-        click_class.upSHIST()
+        click_class.upKey('W')
+        click_class.upKey('SHIFT')
         time.sleep(0.5)
 
-        click_class.downD() #бежим вправо
+        click_class.downKey('D') #бежим вправо
         time.sleep(3.60)
-        click_class.upD()
+        click_class.upKey('D')
         time.sleep(0.3)
 
         click_class.press6() #рушим павутину
         time.sleep(4)
-        click_class.pressR()
+        click_class.pressKey('R')
         time.sleep(0.3)
 
-        click_class.downD() #бежим вправо
+        click_class.downKey('D') #бежим вправо
         time.sleep(1.9)
-        click_class.upD()
+        click_class.upKey('D')
         time.sleep(0.3)
 
-        click_class.downW()
-        click_class.downSHIST() #добегаем до стены
+        click_class.downKey('W')
+        click_class.downKey('SHIFT') #добегаем до стены
         time.sleep(5.4)
-        click_class.upW()
-        click_class.upSHIST()
+        click_class.upKey('W')
+        click_class.upKey('SHIFT')
         time.sleep(0.5)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(6)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(3)
 
-        click_class.pressR()
+        click_class.pressKey('R')
         time.sleep(0.3)
 
-        click_class.downS() #бежим назад
+        click_class.downKey('S') #бежим назад
         time.sleep(2.5)
-        click_class.upS()
+        click_class.upKey('S')
         time.sleep(0.3)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(5)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(0.3)
 
         click_class.press6() #рушим павутину
         time.sleep(4)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(4)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(3)
 
-        click_class.pressR()
+        click_class.pressKey('R')
         time.sleep(0.3)
 
-        click_class.downW() #бежим влево
+        click_class.downKey('W') #бежим влево
         time.sleep(1)
-        click_class.upW()
+        click_class.upKey('W')
         time.sleep(0.3)
 
-        click_class.downA() #бежим влево
+        click_class.downKey('A') #бежим влево
         time.sleep(4)
-        click_class.upA()
+        click_class.upKey('A')
         time.sleep(0.3)
 
     r = None
     while r is None:
         print('ожидаем загрузки')
-        ins = cv2.imread("data/institut/pavyk.jpg", 0)
+        ins = cv2.imread("img/institut/pavyk.jpg", 0)
         w, h = ins.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -336,12 +336,12 @@ while o:
 
     time.sleep(0.3)
 
-    click_class.pressESC()
+    click_class.pressKey('ESC')
 
     r = None
     while r is None:
         print('ожидаем к3')
-        ins = cv2.imread("data/institut/one3.jpg", 0)
+        ins = cv2.imread("img/institut/one3.jpg", 0)
         w, h = ins.shape[::-1]
         image = pyautogui.screenshot(region=(0, 0, x, y))
         img_rgb = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -360,11 +360,11 @@ while o:
     click_class.press1()
     time.sleep(2)
 
-    click_class.downW()
-    click_class.downSHIST()  # добегаем до стены
+    click_class.downKey('W')
+    click_class.downKey('SHIFT')  # добегаем до стены
     time.sleep(2)
-    click_class.upW()
-    click_class.upSHIST()
+    click_class.upKey('W')
+    click_class.upKey('SHIFT')
     time.sleep(0.5)
 
 
