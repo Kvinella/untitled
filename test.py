@@ -9,4 +9,15 @@ x, y = pyautogui.size()  # получение координат монитор�
 tyk.click_class.start()
 time.sleep(3)
 
-tyk.click_class.moveRelative(0, 400)
+
+r = None
+while r is None:
+    check = functions.try_find_image("img/ferma/net.jng")  # чек на то вырасло ли что-то
+
+    if check is not True:
+        print('жду')
+
+        time.sleep(60)
+    else:
+        print('выр')
+        r = True

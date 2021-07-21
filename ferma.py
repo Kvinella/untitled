@@ -76,6 +76,14 @@ while o1 < n1:
         tyk.click_class.click()
         time.sleep(6)
 
+    r = None
+    while r is None:
+        check = functions.try_find_image("img/ferma/net.jng")  # чек на то вырасло ли что-то
+        if check is not True:
+            time.sleep(60)
+        else:
+            r = True
+
     functions.find_image("img/ferma/lp.jpg")  # поиск лопаты
     time.sleep(1)
     tyk.click_class.click()
@@ -95,8 +103,12 @@ while o1 < n1:
     time.sleep(0.3)
     tyk.click_class.click()
 
-    time.sleep(7)
+    if o1 == n1-1:
+        time.sleep(300)
+
+    time.sleep(8)
     tyk.click_class.pressKey('ESC')
+    time.sleep(0.2)
 
     pt, w, h = functions.find_image("img/ferma/ESC.jpg")
     tyk.click_class.moveTo(pt, w, h)
